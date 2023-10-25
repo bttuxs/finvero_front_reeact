@@ -39,6 +39,28 @@ class Ordenes extends React.Component {
         return data[0].producto_description
     }
 
+    makeTableItems(itemList){
+        let productoList = []
+        let totalOrden = 0
+        for(let idx=0; idx < itemList.length; idx++){
+            let total = itemList[idx].cantidad * itemList[idx].precio
+            totalOrden+=total
+            productoList.push(<tr key={"row-"+idx} className="bg-white border-b cursor-pointer hover:bg-gray-200">
+                <td className="text-center">{idx+1}</td>
+                <td className="text-center">{itemList[idx].producto}</td>
+                <td className="text-center">{itemList[idx].cantidad}</td>
+                <td className="text-center">{itemList[idx].precio}</td>
+                <td className="text-center">{total}</td>
+                <td className="text-center">
+                    <div className="text-red-500 hover:bg-red-300 hover:text-white" onClick={() => this.removeItem(itemList[idx])}>Eliminar</div>
+                </td>
+            </tr>)                
+        }
+        this.setState({totalOrden})
+        return productoList
+    }
+
+
     async getOrders() {
         this.context.setGlobalSpinner(true)
         let rows = []
