@@ -5,4 +5,8 @@ export const OrdenService = {
         const path = "orden/user/" + idUser
         return httpClient.get(urlBase, path)
     },
+    createOrden: (params, idUser) => {
+        const path = "orden/detalle/items/" + idUser
+        return httpClient.post(urlBase, path, params)
+    }
 }
