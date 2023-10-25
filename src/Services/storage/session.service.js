@@ -20,7 +20,7 @@ class storage {
 
   validSession(){
     let dataSession = this.getSession();
-    if(dataSession && dataSession.status === 'ok' && dataSession.access_token){
+    if(dataSession && dataSession.id){
         return true
     }
     return false
