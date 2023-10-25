@@ -16,6 +16,7 @@ import reportWebVitals from './reportWebVitals';
 
 
 const AuthComponent = React.lazy(() => import('./Auth/Auth'));
+const LogoutComponent = React.lazy(() => import('./Auth/Logout/Logout'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<AuthComponent />} />
+        <Route path="/logout" element={<LogoutComponent />} />
         { RouterMain }
       </Routes>
     </BrowserRouter>
