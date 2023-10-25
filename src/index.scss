@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Jura:400');
+* { font-family: Jura, Arial; font-weight: 400; }
+body { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,p { margin: 0; }
