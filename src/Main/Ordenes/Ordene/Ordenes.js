@@ -36,7 +36,6 @@ class Ordenes extends React.Component {
     getNombreProducto(id){
         const productos = this.state.productos
         const data = productos.filter(item => item.id === id)
-        console.log(data)
         return data[0].producto_description
     }
 
