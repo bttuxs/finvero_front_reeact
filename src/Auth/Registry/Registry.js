@@ -9,7 +9,7 @@ class Registry extends React.Component{
         super(props)
         this.handleInputChange = this.handleInputChange.bind(this);
         this.state = {
-            authLogin: true,
+            authLogin: false,
             user: "",
             form: {
                 email: '',
