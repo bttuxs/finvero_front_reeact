@@ -11,7 +11,7 @@ import NotificationContextProvider from './Provider/Notification/NotificactionCo
 import Loader from './components/Loader/Loader';
 import Alert from './components/Alert/Alert';
 import LoaderStatic from 'src/components/Loader/LoaderStatic';
-
+import RouterMain from './Main/MainRouter';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -26,6 +26,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<AuthComponent />} />
+        { RouterMain }
       </Routes>
     </BrowserRouter>
   </React.Suspense>
